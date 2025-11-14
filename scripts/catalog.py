@@ -51,7 +51,7 @@ catalog["price"] = catalog.apply(
     axis=1
 )
 
-catalog["currency"] = "€"  # uniforme
+catalog["currency"] = "€"  # après conversion, tout est en euros
 
 # -----------------------------
 # 7. Mapping catégories
@@ -73,7 +73,7 @@ after = catalog.shape[0]
 print(f"Doublons SKU supprimés : {before - after}")
 
 # -----------------------------
-# 9. Colonnes propres & ordre final
+# 9. Colonnes & ordre final
 # -----------------------------
 catalog_final = catalog[[
     "sku",
