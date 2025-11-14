@@ -15,7 +15,7 @@ Le projet génère des données **propres**, des **KPI de qualité**, et une doc
 ## Structure du projet
 
 
-<img width="673" height="462" alt="image" src="https://github.com/user-attachments/assets/303f5a29-fb6d-4af1-a9ed-9e01fd4a7d78" />
+<img width="539" height="262" alt="image" src="https://github.com/user-attachments/assets/8d31a180-4946-47bc-a3fb-fba12ec7fcb6" />
 
 
 ---
@@ -105,3 +105,4 @@ pip install pandas numpy
 - Chaque étape est reproductible, aucun traitement manuel nécessaire
 - Les colonnes numériques restent numériques pour permettre les calculs futurs (ex : poids, prix, montant)
 - Si vous ajoutez de nouveaux fichiers source, il suffit de les placer dans `data/raw/` et de relancer le script correspondant
+
