@@ -90,3 +90,27 @@ catalog_final = catalog[[
 catalog_final.to_csv(output_clean_path, index=False)
 print(f"Catalogue canonique créé → {output_clean_path}")
 
+
+
+# -----------------------------
+# 11. Génération du KPI 
+# -----------------------------
+print("Génération des KPI catalogue...")
+
+report_path = os.path.join(BASE_DIR, "data", "reports", "kpi_catalog.csv")
+os.makedirs(os.path.dirname(report_path), exist_ok=True)
+
+kpi = {
+    "nombre_lignes": len(catalog_final),
+    "taux_valeurs_manquantes_%": catalog_final.isna().sum().sum() / catalog_final.size * 100,
+    "taux_doublons_sku_%": (1 - catalog_final["sku"].nunique() / len(catalog_final)) * 100,
+    "prix_min_eur": catalog_final["price"].min(),
+    "prix_max_eur": catalog_final["price"].max(),
+    "poids_min_kg": catalog_final["weight_kg"].min(),
+    "poids_max_kg": catalog_final["weight_kg"].max(),
+}
+
+df_kpi = pd.DataFrame([kpi])
+df_kpi.to_csv(report_path, index=False)
+
+print(f"KPI catalogue sauvegardé → {report_path}")
