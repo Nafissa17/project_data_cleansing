@@ -28,7 +28,7 @@ Le projet génère des données **propres**, des **KPI de qualité**, et une doc
 - Python 3.10+  
 - Packages Python :
 ```bash
-pip install pandas numpy
+pip install pandas numpy matplotlib seaborn
 
 
 # Guide d'utilisation des scripts de nettoyage de données
@@ -95,7 +95,42 @@ pip install pandas numpy
 - `data/reports/daily_revenue.csv` → chiffre d'affaires journalier
 - `data/reports/kpi_sales.csv` → KPI de qualité des ventes
 
+
+  ---
+  
+
+### Visualisations Bonus
+
+Ce script génère des visualisations simples pour vérifier la qualité et l'évolution des données clients, catalogue et ventes.
+
+### Fichiers requis
+
+- `data/clean/clients_clean.csv`
+- `data/clean/catalog_canonique.csv`
+- `data/clean/sales_clean.csv`
+
+Les fichiers doivent exister avant d'exécuter le script.
+
+
+### Graphiques générés
+
+1. Répartition des clients par pays
+2. Répartition des produits par catégorie
+3. Évolution du chiffre d'affaires quotidien
+
+### Exécution
+
+Depuis le dossier racine du projet :
+```bash
+cd tests
+python visualisation_bonus.py
+```
+
+Les graphiques s'affichent automatiquement. Fermer chaque fenêtre pour passer au graphique suivant.
+
+
 ---
+
 
 ## Bonnes pratiques
 
@@ -105,4 +140,5 @@ pip install pandas numpy
 - Chaque étape est reproductible, aucun traitement manuel nécessaire
 - Les colonnes numériques restent numériques pour permettre les calculs futurs (ex : poids, prix, montant)
 - Si vous ajoutez de nouveaux fichiers source, il suffit de les placer dans `data/raw/` et de relancer le script correspondant
+
 
