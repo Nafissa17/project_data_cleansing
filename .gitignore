@@ -1,0 +1,10 @@
+# Fichiers Python compilés
+__pycache__/
+*.pyc
+
+# Dossiers de données générés
+data/clean/
+data/reports/
+
+# IDE
+.vscode/
