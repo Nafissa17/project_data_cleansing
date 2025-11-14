@@ -15,7 +15,7 @@ Le projet génère des données **propres**, des **KPI de qualité**, et une doc
 ## Structure du projet
 
 
-<img width="539" height="262" alt="image" src="https://github.com/user-attachments/assets/8d31a180-4946-47bc-a3fb-fba12ec7fcb6" />
+<img width="556" height="454" alt="image" src="https://github.com/user-attachments/assets/b28c2651-1389-4d39-a41c-768b403addf3" />
 
 
 ---
@@ -140,5 +140,6 @@ Les graphiques s'affichent automatiquement. Fermer chaque fenêtre pour passer a
 - Chaque étape est reproductible, aucun traitement manuel nécessaire
 - Les colonnes numériques restent numériques pour permettre les calculs futurs (ex : poids, prix, montant)
 - Si vous ajoutez de nouveaux fichiers source, il suffit de les placer dans `data/raw/` et de relancer le script correspondant
+
 
 
